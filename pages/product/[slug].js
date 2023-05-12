@@ -3,8 +3,8 @@ import {IoMdHeartEmpty} from "react-icons/io";
 import Wrapper from "@/components/Wrapper";
 import ProductDetailsCarousel from "@/components/ProductDetailsCarousel";
 import RelatedProducts from "@/components/RelatedProducts";
-import { useDispatch } from "react-redux";
-import {addToCart} from "@/store/cartSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {addToCart, addToFavorite} from "@/store/cartSlice";
 
 const ProductDetails = () => {
     const dispatch = useDispatch();
@@ -13,10 +13,21 @@ const ProductDetails = () => {
         const newItem = {
             name: 'Jordan Retro 6 G',
             detail: 'Men`s Golf Shoes',
-            price: '$ 299.00',
-            img: "/p1.png"
+            price: '299.00',
+            img: "product-1.webp",
+            id: Math.floor(Math.random() * 1000)
         }; // Пример нового элемента корзины
         dispatch(addToCart(newItem));
+    };
+
+    const handleToFavorite = () => {
+        const newItem = {
+            name: 'Jordan Retro 6 G',
+            detail: 'Men`s Golf Shoes',
+            price: '299.00',
+            img: "product-1.webp",
+        }; // Пример нового элемента корзины
+        dispatch(addToFavorite(newItem));
     };
 
 
@@ -98,7 +109,11 @@ const ProductDetails = () => {
                         >Add to Cart
                         </button>
 
-                        <button className="w-full py-4 rounded-full border  border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 mb-10 hover:opacity-75">
+                        <button className="w-full py-4 rounded-full border  border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 mb-10 hover:opacity-75"
+                                onClick={()=>{
+                                    dispatch(handleToFavorite)
+                                }}
+                        >
                             Whishlist
                             <IoMdHeartEmpty size={20} />
                         </button>

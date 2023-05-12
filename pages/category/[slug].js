@@ -6,8 +6,6 @@ import ProductCard from "@/components/ProductCard";
 
 
 const Category = () => {
-    const router = useRouter();
-    const {slug} = router.query;
 
     return (
         <div className="w-full md:py-20">

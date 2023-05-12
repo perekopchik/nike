@@ -2,7 +2,6 @@ import React from 'react'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import {BiArrowBack} from "react-icons/bi";
 
 const ProductDetailsCarousel = () => {
     return (
@@ -14,13 +13,13 @@ const ProductDetailsCarousel = () => {
                 thumbWidth={60}
                 className="productCarousel"
             >
-                <img src="/p1.png"/>
-                <img src="/p2.png"/>
-                <img src="/p3.png"/>
-                <img src="/p4.png"/>
-                <img src="/p5.png"/>
-                <img src="/p6.png"/>
-                <img src="/p7.png"/>
+                <img src="/nikestore/p1.png"/>
+                <img src="/nikestore/p2.png"/>
+                <img src="/nikestore/p3.png"/>
+                <img src="/nikestore/p4.png"/>
+                <img src="/nikestore/p5.png"/>
+                <img src="/nikestore/p6.png"/>
+                <img src="/nikestore/p7.png"/>
 
 
             </Carousel>
