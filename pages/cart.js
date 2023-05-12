@@ -32,7 +32,7 @@ const Cart = () => {
                             <div className="flex-[2]">
                                 <div className="text-lg font-bold">Cart Items</div>
                                 {cartItems?.cartItems?.map((item,i)=>(
-                                    <CartItem data={item} i={i}/>
+                                    <CartItem data={item} key={i}/>
                                 ))}
                             </div>
 

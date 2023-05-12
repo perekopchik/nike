@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   basePath: '/nikestore',
-  assetPrefix: '/nikestore/',
+  assetPrefix: '/nikestore',
+  images: {
+    loader: "akamai",
+    path: ""
+  }
 }
 
 module.exports = nextConfig

@@ -4,10 +4,10 @@ import { RiDeleteBin6Line} from "react-icons/ri";
 import {useDispatch} from "react-redux";
 import {removeFromCart} from "@/store/cartSlice";
 
-const CartItem = ({data,i}) => {
+const CartItem = ({data,key}) => {
     const dispatch = useDispatch();
     return (
-        <div key={i} className="flex py-5 gap-3 md:gap-5 border-b">
+        <div key={key} className="flex py-5 gap-3 md:gap-5 border-b">
             <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
                 <img src={data.img} alt={`image-${data.id}`}/>
             </div>
